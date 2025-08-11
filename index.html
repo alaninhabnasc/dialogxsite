@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Anúncio DialogX</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #dde1ff;
+      padding-top: 60px;
+    }
+
+    /* MENU */
+    nav.menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #dde1ff;
+      box-shadow: 0 2px 5px #9a60a1;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      gap: 20px; 
+      z-index: 999;
+    }
+
+    nav.menu .logo img {
+      height: 35px;
+    }
+
+    nav.menu ul.menu-links {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      gap: 12px;
+    }
+
+    nav.menu ul.menu-links li a {
+      text-decoration: none;
+      padding: 6px 12px;
+      font-size: 14px;
+      color: white; /* texto branco */
+      background-color: #9333ea; /* roxo sólido */
+      font-weight: bold;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+      transition: background-color 0.3s, transform 0.2s;
+      display: inline-block;
+    }
+
+    nav.menu ul.menu-links li a.active,
+    nav.menu ul.menu-links li a:hover {
+      background-color: #7e22ce; /* roxo mais escuro no hover */
+      transform: scale(1.05);
+    }
+
+    /* CONTEÚDO */
+    main {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgb(228, 173, 245);
+      margin-top: 30px;
+    }
+
+    h1, h2 {
+      margin-bottom: 15px;
+      color: rgb(50, 2, 56);
+    }
+
+    p, ul {
+      font-size: 16px;
+      color: rgb(50, 2, 56);
+      margin-bottom: 10px;
+    }
+
+    a {
+      color: #620a7d;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 600px) {
+      nav.menu {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px 15px;
+        gap: 10px;
+      }
+
+      nav.menu .logo {
+        flex-basis: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 8px;
+      }
+
+      nav.menu ul.menu-links {
+        flex-basis: 100%;
+        justify-content: center;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+      nav.menu ul.menu-links li a {
+        font-size: 13px;
+        padding: 5px 10px;
+      }
+
+      nav.menu .logo img {
+        height: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="menu" aria-label="Menu principal">
+    <div class="logo">
+      <img src="dialogx.jpeg" alt="Logo DialogX" />
+    </div>
+    <ul class="menu-links">
+      <li><a href="#inicio" class="active">Início</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="inicio">
+      <h1>Bem-vindo ao DialogX!</h1>
+      <p>Entenda mais sobre o nosso app</p>
+      <p>
+        A proposta do DialogX é oferecer uma solução automatizada para o gerenciamento de mensagens,
+        voltada especialmente para empresas que lidam com um alto volume de comunicação.
+        O sistema tem como objetivo otimizar o atendimento, agilizando as respostas
+        e melhorando a eficiência no relacionamento com os clientes.
+      </p>
+    </section>
+  </main>
+
+  <main>
+    <section id="sobre">
+      <h2>Sobre Nós</h2>
+      <p>
+        Confira abaixo os links para nossas redes sociais e os protótipos disponíveis para testes.
+        Estamos construindo soluções inovadoras e queremos você junto nessa jornada.
+      </p>
+      <a href="https://www.canva.com/design/DAGpA9OkzvA/eNPGm3RblCP7Efg2u1RGYA/edit" target="_blank" rel="noopener noreferrer">
+        Teste dos nossos protótipos
+      </a><br>
+      <a href="https://www.instagram.com/dialogx_?igsh=M2dlbHFhdmZ0cnNj" target="_blank" rel="noopener noreferrer">
+        Nosso Instagram
+      </a>
+    </section>
+
+    <section id="servicos" style="margin-top: 30px;">
+      <h2>Serviços</h2>
+      <p>Alguns dos serviços oferecidos pelo nosso App são:</p>
+      <ul>
+        <li>Atendimento 24/7, mesmo fora do expediente.</li>
+        <li>Respostas a perguntas frequentes sobre produtos, prazos e políticas.</li>
+        <li>Agendamento de serviços ou reuniões.</li>
+        <li>Acompanhamento de pedidos, entregas e solicitações.</li>
+        <li>Suporte técnico automatizado com encaminhamento para atendimento humano.</li>
+        <li>Encaminhamento inteligente quando o chatbot não resolve.</li>
+        <li>Envio de boletos e segunda via.</li>
+        <li>Pesquisas automáticas de satisfação.</li>
+        <li>Personalização do atendimento conforme o perfil do cliente.</li>
+      </ul>
+    </section>
+  </main>
+
+</body>
+</html>
